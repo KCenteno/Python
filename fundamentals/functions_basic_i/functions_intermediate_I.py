@@ -24,8 +24,6 @@
 #          Iterate Through a List of Dictionaries
 
 
-from multiprocessing.sharedctypes import Value
-
 
 students = [
         {'first_name':  'Michael', 'last_name' : 'Jordan'},
@@ -34,13 +32,13 @@ students = [
         {'first_name' : 'KB', 'last_name' : 'Tonel'}
     ]
 
-def iterateDictionary(students):
-    for student in students:
-        key1 = 'first_name'
-        key2 = 'last_name'
-        print(key1, '-', student[key1], '-', key2, student[key2])
+# def iterateDictionary(students):
+#     for student in students:
+#         key1 = 'first_name'
+#         key2 = 'last_name'
+#         print(key1, '-', student[key1], '-', key2, student[key2])
 
-iterateDictionary(students)
+# iterateDictionary(students)
 
 
 # def iterateDictionary(students):
@@ -53,13 +51,13 @@ iterateDictionary(students)
 #      Get Values From a List of Dictionaries
 
 
-# def iterateDictionary(students):
-#     x = ""
-#     for i in range(len(students)):
-#         x = (students[i]['first_name'])
-#         print(x)
+def iterateDictionary(students):
+    x = ""
+    for i in range(len(students)):
+        x = (students[i]['first_name'])
+        print(x)
 
-# iterateDictionary(students)
+iterateDictionary(students)
 
 
 # def iterateDictionary(students):
