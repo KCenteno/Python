@@ -31,36 +31,42 @@
 #         {'first_name' : 'KB', 'last_name' : 'Tonel'}
 #     ]
 
+
 # def iterateDictionary(students):
 #     x = ""
 #     for i in range(len(students)):
-#         x += (students[i]['first_name'])
-#         x += (students[i]['last_name'])
+#         x += ('first_name')
 #         x += (" - ")
+#         x += (students[i]['first_name'])
+#         x += (",")
+#         x += (' last_name')
+#         x += (" - ")
+#         x += (students[i]['last_name'])
 #     return x
 
 # print(iterateDictionary(students))
 
 
+
 #      Get Values From a List of Dictionaries
 
 
-def iterateDictionary(students):
-    x = ""
-    for i in range(len(students)):
-        x += (students[i]['first_name'])
-    return x
+# def iterateDictionary(students):
+#     x = ""
+#     for i in range(len(students)):
+#         x = (students[i]['first_name'])
+#         print(x)
 
-print(iterateDictionary(students))
+# iterateDictionary(students)
 
 
-def iterateDictionary(students):
-    x = ""
-    for i in range(len(students)):
-        x += (students[i]['last_name'])
-    return x
+# def iterateDictionary(students):
+#     x = ""
+#     for i in range(len(students)):
+#         x = (students[i]['last_name'])
+#         print(x)
 
-print(iterateDictionary(students))
+# iterateDictionary(students)
 
 
 #       Iterate Through a Dictionary with List Values
