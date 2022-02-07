@@ -28,7 +28,7 @@ function acronym(str) {
             acro += str[i+1];
         }
     }
-    return acro
+    return acro.toUpperCase();
 }
 
 console.log(acronym("there's no free lunch - gotta pay yer way"));
