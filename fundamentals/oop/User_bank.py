@@ -57,8 +57,7 @@ user2.addNewAccountWithAmmount("Savings", 1100)
 user2.addNewAccountWithAmmount("Checkings" ,2500)
 user2.addNewAccountWithInterestAndAmount("Retirement",0.07,121000)
 
-user1.make_withdraw(1000,"Savings")
-
+user1.make_withdraw(11000,"Savings"),user1.make_deposit(20000, "Savings"),user1.make_deposit(100000, 'Checkings')
 
 # class User:
 #     def __init__(self, first_name, email):
