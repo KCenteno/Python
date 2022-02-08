@@ -36,7 +36,7 @@ students = [
 #     for student in students:
 #         key1 = 'first_name'
 #         key2 = 'last_name'
-#         print(key1, '-', student[key1], '-', key2, student[key2])
+#         print(key1, '-', student[key1], key2, '-', student[key2])
 
 # iterateDictionary(students)
 
@@ -46,7 +46,7 @@ students = [
 #         for key in i:
 #             print(key, i[key])
 
-
+# iterateDictionary(students)
 
 #      Get Values From a List of Dictionaries
 
