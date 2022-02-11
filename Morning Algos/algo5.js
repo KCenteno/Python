@@ -11,6 +11,9 @@
 
 
 function convertCoinChange(money){
+    if(money%1 != 0){
+        money*=100;
+    }
     var quarters = Math.floor(money/25);
     money-=25*quarters;
     var dimes = Math.floor(money/10);
@@ -20,7 +23,7 @@ function convertCoinChange(money){
     pennies = money;
     return [quarters,dimes,nickels,pennies];
 }
-console.log(convertCoinChange(197))
+console.log(convertCoinChange(1.07))
 
 function convertCoinChange2(money){
     if(money%1 != 0){
