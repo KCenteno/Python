@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.head1 {
+    padding: 10px;
+    width: 300px;
+    color: wheat;
+    background-color: green;
+    border: 2px solid wheat;
+}
+
+.none {
+    border-spacing: 0;
+}
+
+td, tr {
+    height: 50px;
+    width: 50px;
+}
+
+
+.color1 {
+    background-color: wheat;
+}
+
+.color2 {
+    background-color: green;
+}
