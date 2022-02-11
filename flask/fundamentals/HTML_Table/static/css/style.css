@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: auto;
+    width: 500px;
+}
+
+
+#head {
+    display: flex;
+    width: 500px;
+    justify-content: space-around;
+    color: goldenrod;
+    font-size: 20px;
+    background-color: rgb(56, 56, 56);
+    padding: 10px;
+}
+
+
+td, tr {
+    display: flex;
+    justify-content: center;
+}
+
+
+.center {
+    display: flex;
+    justify-content: center;
+}
