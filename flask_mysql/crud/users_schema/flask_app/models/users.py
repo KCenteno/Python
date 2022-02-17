@@ -29,20 +29,20 @@ class User:
 
     @classmethod
     def one_user(cls, data):
-        query = "SELECT * FROM users_schema.users WHERE id = %(id)s;"
+        query = "SELECT * FROM users WHERE id = %(id)s;"
         results = connectToMySQL("users_schema").query_db(query, data)
         return cls(results[0])
 
     @classmethod
     def delete(cls, data):
-        query = "DELETE FROM `users_schema`.`users` WHERE id = %(id)s;"
+        query = "DELETE FROM users WHERE id = %(id)s;"
         results = connectToMySQL("users_schema").query_db(query, data)
         return results
 
 
     @classmethod
     def update(cls, data):
-        query = "UPDATE users_schema.users SET first_name = %(first_name)s, last_name = %(last_name)s,  email = %(email)s,updated_at = NOW() WHERE id = %(id)s;"
+        query = "UPDATE users SET first_name = %(first_name)s, last_name = %(last_name)s,  email = %(email)s,updated_at = NOW() WHERE id = %(id)s;"
         results = connectToMySQL("users_schema").query_db(query, data)
         return results
 
