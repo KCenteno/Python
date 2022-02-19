@@ -11,6 +11,15 @@ def new_ninja():
     return render_template("new_ninja.html", all_dojos = dojos)
 
 
+# ???
+# from flask_app.models import dojo
+# from flask_app.models import ninja
+
+
+# @app.route("/ninjas")
+# def new_ninja():
+#     return render_template("new_ninja.html", all_dojos = dojo.all_dojos())
+
 
 @app.route("/new_ninjas", methods=["post"])
 def add_ninja():
