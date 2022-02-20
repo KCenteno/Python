@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    font-size: 20px;
+    padding: 30px;
+    margin: auto;
+    background-color: #10c9ef;
+    width: 300px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+
+.wide {
+    height: 25px;
+    width: 300px;
+}
+
+.btn {
+    margin-top: 5px;
+    height: 30px;
+    width: 80px;
+    color: black;
+    background-color: #fec008;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+
+
+.container2 {
+    background-color: #10c9ef;
+    padding: 30px;
+    margin: auto;
+    width: 350px;
+}
