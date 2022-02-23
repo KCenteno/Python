@@ -1,8 +1,5 @@
 from flask_app.config.mysqlconnection import connectToMySQL
-from flask_app import app
 from flask import flash
-from flask_bcrypt import Bcrypt
-bcrypt = Bcrypt(app)
 import re
 from flask_app import LR
 
@@ -27,13 +24,6 @@ class Registration:
 
     @classmethod
     def save(cls, data):
-        data = {
-            "first_name" : data["first_name"],
-            "last_name" : data["last_name"],
-            "email" : data["email"],
-            "password" : data["password"]
-        }
-        data["password"] = bcrypt.generate_password_hash(data["password"])
         query = "INSERT INTO registers ( first_name, last_name, email, password, created_at) VALUES ( %(first_name)s, %(last_name)s, %(email)s, %(password)s, NOW());"
         return connectToMySQL(LR).query_db( query, data )
 
@@ -41,10 +31,10 @@ class Registration:
     @classmethod
     def with_email(cls, data):
         query = "SELECT * FROM registers WHERE email = %(email)s"
-        results = connectToMySQL(LR).query_db(query, data)
-        if results:
-            return cls(results[0])
-        return False
+        result = connectToMySQL(LR).query_db(query, data)
+        if len(result) < 1:
+            return False
+        return cls(result[0])
 
 
     # @classmethod
@@ -53,17 +43,6 @@ class Registration:
     #     results = connectToMySQL(LR).query_db(query, data)
     #     return cls(results[0])
 
-
-    @classmethod
-    def check_login(cls, data):
-        in_db = Registration.with_email(data)
-        if not in_db:
-            flash("invalid Email/Password", 'log')
-            return False
-        if not bcrypt.check_password_hash(in_db.password, data['password']):
-            flash("invalid Email/Password", 'log')
-            return False
-        return True
 
 
     @staticmethod

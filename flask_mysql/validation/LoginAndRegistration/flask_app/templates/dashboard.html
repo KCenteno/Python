@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css') }}">
 </head>
 <body>
-    <h1 class="middle">Welcome {{ session.first_name }}!!!</h1>
+    <h1 class="middle">Welcome {{ session.name }}!!!</h1>
     <a href="/reset" class="btn3">Logout</a>
 </body>
 </html>
