@@ -32,8 +32,6 @@ class Survey:
 
 
 
-
-
     @staticmethod
     def validate_survey(survey):
         is_valid = True # we assume this is true
